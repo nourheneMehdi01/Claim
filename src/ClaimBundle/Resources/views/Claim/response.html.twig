@@ -1,0 +1,42 @@
+{% form_theme formC 'bootstrap_4_layout.html.twig' %}
+    {% block head %}
+                {% block stylesheets %}
+        <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css"/>
+                    {% endblock %}
+    {% endblock %}
+
+{% block body %}
+
+<br>
+    <br>
+    <br><br>
+    <br><br>
+    <center>
+        <div style="width: 500px;"  >
+            <h1 class="title">
+                Response
+            </h1>
+            {{  form_start(formC) }}
+            <br>
+            {{  form_widget(formC.answer) }}
+            <br>
+            {{  form_widget(formC.status) }}
+            <br>
+
+            <button type="submit" class="btn btn-info" >
+                Response
+            </button>
+            {{ form_end(formC) }}
+        </div>
+    </center>
+
+
+{%  endblock %}
+
+{% block javascripts %}
+<script>
+    $.backstretch("{{ asset('asset/img/login-bg.jpg') }}", {
+        speed: 500
+    });
+</script>
+{% endblock %}

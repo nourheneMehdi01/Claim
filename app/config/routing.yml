@@ -1,0 +1,14 @@
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /User
+
+claim:
+    resource: "@ClaimBundle/Resources/config/routing.yml"
+    prefix:   /Claim
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
